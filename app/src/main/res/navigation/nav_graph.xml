@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homePageFragment">
+
+    <fragment
+        android:id="@+id/homePageFragment"
+        android:name="com.aspire.aspirefinanceschool.homepage.HomePageFragment"
+        android:label="fragment_home_page"
+        tools:layout="@layout/fragment_home_page">
+        <action
+            android:id="@+id/action_homePageFragment_to_studentDetails"
+            app:destination="@id/studentDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/studentDetails"
+        android:name="com.aspire.aspirefinanceschool.studentDetail.StudentDetails"
+        android:label="StudentDetails">
+        <argument
+            android:name="studentName"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="studentMarks"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+</navigation>
